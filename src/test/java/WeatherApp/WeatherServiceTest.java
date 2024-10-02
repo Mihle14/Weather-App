@@ -26,9 +26,7 @@ public class WeatherServiceTest {
             WeatherService.getWeather(city);
             fail("Expected an IOException to be thrown for an invalid city");
         } catch (IOException e) {
-            // Print the exception message for debugging purposes
             System.out.println("Caught exception: " + e.getMessage());
-            // Check that the exception message contains the expected API error indication
             assertTrue(e.getMessage().contains("API error:"), "Exception message should indicate API error");
         }
     }

@@ -11,11 +11,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class WeatherService {
-    private static final String API_KEY = "d228c21795698d221d7a25343e2b6e81"; // Replace with your actual API key
+    private static final String API_KEY = "d228c21795698d221d7a25343e2b6e81";
     private static final String BASE_URL = "http://api.openweathermap.org/data/2.5/weather?q=";
 
     public static String getWeather(String city) throws IOException {
-        // Encode the city name to handle spaces and special characters
+        // city name to handle spaces and special characters
         String encodedCity = URLEncoder.encode(city, StandardCharsets.UTF_8.toString());
         String urlString = BASE_URL + encodedCity + "&appid=" + API_KEY + "&units=metric";
         URL url = new URL(urlString);
@@ -25,7 +25,6 @@ public class WeatherService {
 
         int responseCode = conn.getResponseCode();
         if (responseCode != 200) {
-            // Read the error stream to get more details about the error
             Scanner errorScanner = new Scanner(conn.getErrorStream());
             StringBuilder errorResponse = new StringBuilder();
             while (errorScanner.hasNext()) {
