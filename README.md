@@ -21,5 +21,5 @@ A simple Java Swing application that allows users to retrieve and display weathe
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/weatherapp.git
+   git clone https://github.com/Mihle14/weather-App.git
    cd weatherapp
