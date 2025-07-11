@@ -22,4 +22,4 @@ A simple Java Swing application that allows users to retrieve and display weathe
 
    ```bash
    git clone https://github.com/Mihle14/weather-App.git
-   cd weatherapp
+   cd WeatherApp
